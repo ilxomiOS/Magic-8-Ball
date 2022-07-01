@@ -1,0 +1,25 @@
+//
+//  ViewController.swift
+//  Magic-8-Ball
+//
+//  Created by Ilxom on 01/07/22.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    let ballArray = [#imageLiteral(resourceName: "ball1"), #imageLiteral(resourceName: "ball2"), #imageLiteral(resourceName: "ball3"), #imageLiteral(resourceName: "ball4"), #imageLiteral(resourceName: "ball5")]
+    
+    
+    @IBAction func askButtonPressed(_ sender: Any) {
+        
+        imageView.image = ballArray[Int.random(in: 0...4)]
+    }
+    
+
+}
+
